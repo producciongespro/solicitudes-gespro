@@ -1,0 +1,32 @@
+#imagen_encab_index {
+  height: 60%;
+  width: 65%;
+}
+
+.encabezados-gespro{
+  background-color: #8cc347;
+  text-align: center;
+  margin-top: 6%;
+}
+
+.encabezados-produccion{
+  background-color: #15ab9c;
+  text-align: center;
+  margin-top: 6%;
+}
+
+.encabezados-diseno{
+  background-color: #a3549b;
+  text-align: center;
+  margin-top: 6%;
+}
+
+.encabezados-multimedios{
+  background-color: #f9b33c;
+  text-align: center;
+  margin-top: 6%;
+}
+
+.container_enc {
+  background-color: #CFBA4D;
+}

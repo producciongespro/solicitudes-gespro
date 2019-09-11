@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129164311-30"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-129164311-30');
+</script>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Solicitudes GESPRO-Multimedios</title>
+  <link rel="icon" type="image/jpg" href="img/logo.min.jpg">
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/one-page-wonder.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" href="css/master.css">
+
+  <!-- Custom styles for this template -->
+  <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+  <style>
+    .div-shadow {
+      z-index: 999;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      text-align: center
+    }
+
+.img-ajax-loading {
+    position: absolute;
+    top: 37%;
+    left: 40%;
+    }
+
+    .title {
+    text-align: center;
+    }
+
+  </style>
+
+
+ <!--
+  <script src="vendor/jquery/jquery.min.js" charset="utf-8"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="script/main.js" charset="utf-8"></script>
+
+
+  <script>
+
+  $(document).ready(function () {
+
+    obtenerRegionales();
+
+
+
+    $("#btnEnviar").click(function (e) {
+      e.preventDefault();
+
+      if ($('#nombre').val() != ""  &&  $('#puesto').val() != ""    &&   $('#email').val() != ""  &&    $('#mensaje').val() != ""  ) {
+        let regional = $('select[name="regional"] option:selected').text();
+        enviarComentario($('#nombre').val(), $('#puesto').val(),  regional, $('#email').val(), $('#mensaje').val());
+      } else {
+        $("#mensajeResultado").html("<br><div class='alert alert-danger alert-dismissible fade show' role='alert' id='resultado'> </div>");
+        $("#resultado").html("Debe completar los campos requeridos (nombre,puesto,correo electrónico y mensaje). <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>");
+      }
+
+
+
+    });
+  });
+  </script>
+-->
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a href="index.html"><img id="logo" class="img-responsive" src="img/logo.png"></a>
+      <a class="navbar-brand" href="#">Dirección de Recursos Tecnológicos en Educación </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+  </nav>
+
+
+  <header class="encabezados-diseno">
+    <img id="imagen_encab_index text-center" src="img/banners-diseno.png" alt="">
+  </header>
+
+
+  <!-- Contact-->
+      <section id="contact" data-animate="bounceIn" class="contact-section contact">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+
+              <form id="main-contact-form" class="contact-form" name="contact-form" action="" method="POST">
+                <div class="messages"></div>
+
+                <div class="controls">  <br><br><hr>
+
+                  <div class="row">
+                  <h3>Datos del contacto</h3>
+                  </div>
+
+                  <div class="row">
+                      <div class="col-md-6">
+                        <input type="text"  id="departamento" name="departamento" placeholder="Dependecia que solicita *" required="required" class="form-control" title="Dependencia" > <br>
+                      </div>
+                      <div class="col-md-6">
+                        <input type="text"  id="jefa" name="jefatura" placeholder="Nombre de jefatura *" required="required" class="form-control" title="Nombre de jefatura" > <br>
+                      </div>
+                  </div>
+
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input type="text"  id="nombre" name="nombre" placeholder="Nombre del solicitante*" required="required" class="form-control" title="Nombre" > <br>
+                    </div>
+                    <div class="col-md-6">
+                      <input type="text"  id="email" name="email" placeholder="Correo electrónico *" required="required" class="form-control" title="Correo electrónico" > <br>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-5">
+                      <input type="text"  id="celular" name="telefono" placeholder="Teléfono celular *" required="required" class="form-control" title="celular" > <br>
+                    </div>
+                    <div class="col-md-5">
+                      <input type="text"  id="telefono" name="telefono" placeholder="Teléfono oficina *" required="required" class="form-control" title="Teléfono" > <br>
+                    </div>
+                    <div class="col-md-2">
+                      <input type="text"  id="extension" name="telefono" placeholder="Extensión *" required="required" class="form-control" title="extension" > <br>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="row">
+                <div class="col-sm-4">
+                  <div >
+                    <span class="input-group-text">Fecha de solicitud:</span>
+                  </div>
+                  </div>
+                  <div class="col-sm-3">
+                  <input type="date"  class="form-control" >
+                  </div>
+                </div>
+
+
+
+              <hr>
+                  <br>
+
+
+
+                    <div class="row">
+                      <h3>Tipo de Producto</h3>
+                    </div>
+                    <br>
+
+               <div class="row ">
+                <div class="col-sm-12">
+                  <span class="input-group-text">Diagramación</span>
+                </div>
+              </div>
+              <br>
+
+              <div class="row ">
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Banner:</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Afiche:</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Afiche:</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <div class="row ">
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Carpeta:</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Certificado:</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Atril:</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <div class="row ">
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Tarjeta de presentación:</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Volantes:</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Folletos:</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <div class="row ">
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Desplegable:</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Papel membretado:</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Diseño Logotipo:</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+              <div class="row ">
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Libro:</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Revista:</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-4">
+                  <div class="pretty p-default">
+                    <input type="checkbox" />
+                    <div class="state p-success-o">
+                        <label>Documento:</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+
+
+
+          <div class="row">
+            <div class="col-2">Describa:</div>
+            <div class="col-10" >
+              <input type="text"  class="form-control" >
+            </div>
+          </div>
+          <br>
+
+
+
+
+                            <div class="row ">
+                             <div class="col-sm-12">
+                               <span class="input-group-text">Desarrollo multimedia</span>
+                             </div>
+                            </div>
+                            <br>
+
+                            <div class="row ">
+                             <div class="col-sm-4">
+                               <div class="pretty p-default">
+                                 <input type="checkbox" />
+                                 <div class="state p-warning">
+                                     <label>Presentación:</label>
+                                 </div>
+                               </div>
+                             </div>
+
+                             <div class="col-sm-4">
+                               <div class="pretty p-default">
+                                 <input type="checkbox" />
+                                 <div class="state p-warning">
+                                     <label>Tutorial:</label>
+                                 </div>
+                               </div>
+                             </div>
+
+                             <div class="col-sm-4">
+                               <div class="pretty p-default">
+                                 <input type="checkbox" />
+                                 <div class="state p-warning">
+                                     <label>Animación simple:</label>
+                                 </div>
+                               </div>
+                             </div>
+                            </div>
+                            <br>
+
+                            <div class="row ">
+                             <div class="col-sm-4">
+                               <div class="pretty p-default">
+                                 <input type="checkbox" />
+                                 <div class="state p-warning">
+                                     <label>Animación compleja:</label>
+                                 </div>
+                               </div>
+                             </div>
+
+                             <div class="col-sm-4">
+                               <div class="pretty p-default">
+                                 <input type="checkbox" />
+                                 <div class="state p-warning">
+                                     <label>Banner Animado:</label>
+                                 </div>
+                               </div>
+                             </div>
+
+                             <div class="col-sm-4">
+                               <div class="pretty p-default">
+                                 <input type="checkbox" />
+                                 <div class="state p-warning">
+                                     <label>Imagen:</label>
+                                 </div>
+                               </div>
+                             </div>
+                            </div>
+                            <br>
+
+                            <div class="row ">
+                             <div class="col-sm-4">
+                               <div class="pretty p-default">
+                                 <input type="checkbox" />
+                                 <div class="state p-warning">
+                                     <label>Gráfico:</label>
+                                 </div>
+                               </div>
+                             </div>
+                             </div>
+                             <br>
+
+
+                            <div class="row">
+                              <div class="col-2">Describa:</div>
+                              <div class="col-10" >
+                                <input type="text"  class="form-control" >
+                              </div>
+                            </div>
+                            <br>
+
+
+                            <div class="row ">
+                             <div class="col-sm-12">
+                               <span class="input-group-text">Web</span>
+                             </div>
+                            </div>
+                            <br>
+
+                            <div class="row ">
+                             <div class="col-sm-4">
+                               <div class="pretty p-default">
+                                 <input type="checkbox" />
+                                 <div class="state p-danger">
+                                     <label>Minisitio:</label>
+                                 </div>
+                               </div>
+                             </div>
+
+                             <div class="col-sm-4">
+                               <div class="pretty p-default">
+                                 <input type="checkbox" />
+                                 <div class="state p-danger">
+                                     <label>Página:</label>
+                                 </div>
+                               </div>
+                             </div>
+
+                             <div class="col-sm-4">
+                               <div class="pretty p-default">
+                                 <input type="checkbox" />
+                                 <div class="state p-danger">
+                                     <label>Botón:</label>
+                                 </div>
+                               </div>
+                             </div>
+                            </div>
+                            <br>
+
+                            <div class="row ">
+                             <div class="col-sm-4">
+                               <div class="pretty p-default">
+                                 <input type="checkbox" />
+                                 <div class="state p-danger">
+                                     <label>Banner:</label>
+                                 </div>
+                               </div>
+                             </div>
+
+                             <div class="col-sm-4">
+                               <div class="pretty p-default">
+                                 <input type="checkbox" />
+                                 <div class="state p-danger">
+                                     <label>Boletin:</label>
+                                 </div>
+                               </div>
+                             </div>
+
+                            </div>
+                            <br>
+
+
+                            <div class="row">
+                              <div class="col-2">Describa:</div>
+                              <div class="col-10" >
+                                <input type="text"  class="form-control" >
+                              </div>
+                            </div>
+                      <br>
+
+                      <div class="row ">
+                       <div class="col-sm-12">
+                         <span class="input-group-text">Otro</span>
+                       </div>
+                      </div>
+                      <br>
+
+                      <div class="row">
+                        <div class="col-2">  Describa:</div>
+                        <div class="col-10" >
+                          <textarea class="form-control"  rows="2"></textarea>
+                        </div>
+                      </div>
+
+                    <div class="col-md-12 text-center">
+                    <input type="button" class="btn btn-primary btn-m rounded-pill mt-5" id="btnEnviar" value="Enviar"/>
+                    <br>
+                      <div id="mensajeResultado">
+                      </div>
+                    <br>
+                    </div>
+
+                    <div>
+                      <h3 class="title">Los diseñadores se comunicarán en el momento de análizar la solicitud para coordinar fecha de inicio.</h3>
+                    </div>
+
+
+
+
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+        <hr>
+
+
+<!-- ********************************* -->
+
+<hr><hr>
+<!-- Testimonials-->
+<section id="testimonials" class="testimonials-section bg-gray">
+   <div class="container">
+     <header class="text-center mb-2">
+       <h2 data-animate="fadeInUp" class="title">Equipo GESPRO<br><span>2019</span></h2>
+       <p data-animate="fadeInUp" class="lead">El departamento de Gestión y Producción de Recursos Tecnológicos (GESPRO) le corresponde la producción de recursos tecnológicos destinados a los procesos de enseñanza-aprendizaje.</p>
+     </header>
+<hr><hr>
+
+     <div class="container">
+       <div class="row">
+
+         <div class="col-md-2 text-center">
+           <div><img class="name-picture" alt="" src="img/person-1.jpg">
+             <h5>Marco Brenes</h5>
+             <p>Diseñador Gráfico</p>
+           </div>
+         </div>
+
+           <div class="col-md-3 text-center">
+           <div><img class="name-picture" alt="" src="img/person-2.jpg">
+             <h5>Christian Vargas</h5>
+             <p>Diseñador Gráfico</p>
+           </div>
+           </div>
+
+           <div class="col-md-2 text-center">
+           <div><img class="name-picture" alt="" src="img/person-3.jpg">
+             <h5>Mariana Molina</h5>
+             <p>Diseñadora Gráfica</p>
+           </div>
+           </div>
+
+           <div class="col-md-3 text-center">
+           <div><img class="name-picture" alt="" src="img/person-4.jpg">
+             <h5>Karla Guevara</h5>
+             <p>Diseñadora Gráfica</p>
+           </div>
+           </div>
+
+           <div class="col-md-2 text-center">
+           <div><img class="name-picture" alt="" src="img/person-5.jpg">
+             <h5>Sonia Hernández</h5>
+             <p>Productora Audiovisual</p>
+           </div>
+           </div>
+       </div>
+       </div>
+
+       <div class="container">
+         <div class="row">
+           <div class="col-md-4 text-center">
+           <div><img class="name-picture" alt="" src="img/person-6.jpg">
+             <h5>Katherine Williams</h5>
+             <p>Asesora Inglés</p>
+           </div>
+           </div>
+
+           <div class="col-md-4 text-center">
+             <div><img class="name-picture" alt="" src="img/person-7.jpg">
+               <h5>Sirlene Chaves</h5>
+               <p>Asesora de Artes Plásticas</p>
+             </div>
+           </div>
+
+             <div class="col-md-4 text-center">
+             <div><img class="name-picture" alt="" src="img/person-8.jpg">
+               <h5>Óscar Pérez</h5>
+               <p>Asesor de Informática</p>
+             </div>
+             </div>
+       </div>
+        </div>
+
+     <div class="container">
+         <div class="row">
+             <div class="col-md-2 text-center">
+             <div><img class="name-picture" alt="" src="img/person-9.jpg">
+               <h5>Patricia Hernández</h5>
+               <p>Asesora de Informática</p>
+             </div>
+             </div>
+
+             <div class="col-md-3 text-center">
+             <div><img class="name-picture" alt="" src="img/person-10.jpg">
+               <h5>Luis Chacón</h5>
+               <p>Asesor de Informática</p>
+             </div>
+             </div>
+
+             <div class="col-md-2 text-center">
+             <div><img class="name-picture" alt="" src="img/person-11.jpg">
+               <h5>Ana Araya</h5>
+               <p>Asesora de Informática</p>
+             </div>
+             </div>
+
+             <div class="col-md-3 text-center">
+             <div><img class="name-picture" alt="" src="img/person-12.jpg">
+               <h5>Elí Chacón</h5>
+               <p>Jefatura</p>
+             </div>
+             </div>
+             <div class="col-md-2 text-center">
+             <div><img class="name-picture" alt="" src="img/person-13.jpg">
+               <h5>Mauricio Sanabria</h5>
+               <p>Productor Audiovisual</p>
+             </div>
+             </div>
+         </div>
+       </div>
+
+</section>
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-black">
+    <div class="container">
+      <p class="m-0 text-center text-white small">Dirección de Recursos Tecnológicos en Educación</p>
+        <p class="m-0 text-center text-white small">Departamento de GESPRO - 2019</p>
+          <p class="m-0 text-center text-white small">22553525, ext.4622 </p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
