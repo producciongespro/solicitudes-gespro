@@ -30,3 +30,7 @@
 .container_enc {
   background-color: #CFBA4D;
 }
+
+.puntero-mano {
+  cursor: pointer;
+}

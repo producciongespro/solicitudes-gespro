@@ -1,10 +1,10 @@
 import React from 'react';
+import Navegacion from './Navegacion';
 import config from '../config.json';
-
 const img = config.assets + "img/";
 
 
-function TipoSolicitud() {
+function TipoSolicitud(props) {
 
     console.log(img);
 
@@ -12,18 +12,10 @@ function TipoSolicitud() {
     return (
         <React.Fragment>
 
-            {/* Navigation */}
-            <nav className="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
-                <div className="container">
-                    <img id="logo" className="img-responsive" src={img + "logo.png"} />
-                    <a className="navbar-brand" href="#">Dirección de Recursos Tecnológicos en Educación </a>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon" />
-                    </button>
-                </div>
-            </nav>
+          <Navegacion />
+
             <header className="encabezados-gespro">
-                <img id="imagen_encab_index text-center" src={img + "banner-gespro.png"} alt="" />
+                <img id="imagen_encab_index text-center" src={img + "banner-gespro.png"} alt="banner gespro" />
             </header>
             {/* Contact*/}
             <section id="contact" data-animate="bounceIn" className="contact-section contact">
@@ -41,20 +33,40 @@ function TipoSolicitud() {
                     </div>
                     <div className="row">
                         <div className="col-lg-4 mx-auto">
-                            <div className="p-5">
-                                <a href="produccion.html"><img className="img-fluid rounded-circle" src={img + "recursos.png"} alt="recursos" /></a>
+                            <div className="p-5">                                
+                                    <img 
+                                    id="produccion"
+                                    className="img-fluid rounded-circle puntero-mano" 
+                                    src={img + "recursos.png"} 
+                                    onClick={props.handleNavegacion}
+                                    alt="recursos" 
+                                    />                                
                                 <h4 className="text-center">Producción <br />(recursos)</h4>
                             </div>
                         </div>
                         <div className="col-lg-4 mx-auto">
-                            <div className="p-5">
-                                <a href="multimedio.html"><img className="img-fluid rounded-circle" src={img + "multimedio.jpg"} alt="multimedia" /></a>
+                            <div className="p-5">                                
+                                    <img
+                                    id="multimedio" 
+                                    className="img-fluid rounded-circle puntero-mano" 
+                                    src={img + "multimedio.jpg"} 
+                                    onClick={props.handleNavegacion}
+                                    alt="multimedia" 
+                                    />
+
                                 <h4 className="text-center">Multimedios <br /> (audio-video)</h4>
                             </div>
                         </div>
                         <div className="col-lg-4 mx-auto">
-                            <div className="p-5">
-                                <a href="diseño.html"><img className="img-fluid rounded-circle" src={img + "diseno.jpg"} alt="diseño" /></a>
+                            <div className="p-5">                                
+                                    <img
+                                        id="diseno" 
+                                        className="img-fluid rounded-circle puntero-mano" 
+                                        src={img + "diseno.jpg"} 
+                                        alt="diseño" 
+                                        onClick={props.handleNavegacion}
+                                        />
+
                                 <h4 className="text-center">Diseño gráfico</h4>
                             </div>
                         </div>
