@@ -5,7 +5,9 @@ import TipoSolicitud from './comp/TipoSolicitud';
 function App() {
   return (
     <React.Fragment>
-      <TipoSolicitud />
+            
+       <TipoSolicitud /> 
+
     </React.Fragment>
   );
 }
