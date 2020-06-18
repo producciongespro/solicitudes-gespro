@@ -3,6 +3,7 @@ import TipoSolicitud from './comp/TipoSolicitud';
 import FormMultimedio from './comp/FormMultmedio';
 import FormDiseno from './comp/FormDiseno';
 import FormProduccion from './comp/FormProduccion';
+import PanelAdmin from './comp/PanelAdmin';
 
 
 function App() {
@@ -15,6 +16,7 @@ useEffect(()=>{
 
 const init=()=>{
   setCompActual( <TipoSolicitud handleNavegacion={handleNavegacion} /> )
+  //setCompActual( <PanelAdmin  /> );
 }
 
 

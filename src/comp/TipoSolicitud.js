@@ -52,7 +52,7 @@ function TipoSolicitud(props) {
                                     src={img + "multimedio.jpg"} 
                                     onClick={props.handleNavegacion}
                                     alt="multimedia" 
-                                    />
+                                    />                                    
 
                                 <h4 className="text-center">Multimedios <br /> (audio-video)</h4>
                             </div>
