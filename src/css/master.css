@@ -34,3 +34,7 @@
 .puntero-mano {
   cursor: pointer;
 }
+
+.nombre-proyecto:hover {
+  font-weight: bold;
+}
