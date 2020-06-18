@@ -8,15 +8,15 @@ const img = config.assets + "img/";
 
 
 function PanelAdmin(params) {
-    const [itemProyecto, setItemProyecto]= useState(null);
+    const [item, setItem]= useState(null);
 
     useEffect(()=>{
-            console.log("itemProyecto", itemProyecto);            
-    },[itemProyecto])
+            console.log("item", item);            
+    },[item])
 
     const handleCargarProyecto=(e)=> {
         console.log(parseInt(e.target.id));
-        setItemProyecto( obtenerItem(dataset, e.target.id)  );
+        setItem( obtenerItem(dataset, e.target.id)  );
     }
 
 
@@ -27,7 +27,7 @@ function PanelAdmin(params) {
                     <Explorador array={dataset} handleCargarProyecto={handleCargarProyecto} />
                 </div>                
                 <div className="col-sm-10">
-                    <VisorProyecto array={dataset} />
+                    <VisorProyecto item={item} />
                 </div>                
             </div>
     </React.Fragment>

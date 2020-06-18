@@ -10,10 +10,13 @@ function PanelAdmin(params) {
 
     return (
         <React.Fragment>
-            <Encabezado />
-            <TituloProyecto />
+            <Encabezado />  
+            {
+                params.item &&
+                <TituloProyecto item={params.item} />
+            }
+            
 
-         
         </React.Fragment>
     );
 
