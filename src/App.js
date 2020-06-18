@@ -18,8 +18,8 @@ useEffect(()=>{
 }, [])
 
 const init=()=>{
-  setCompActual( <TipoSolicitud handleNavegacion={handleNavegacion} /> )
-  //setCompActual( <PanelAdmin  /> );
+  //setCompActual( <TipoSolicitud handleNavegacion={handleNavegacion} /> )
+  setCompActual( <PanelAdmin  /> );
   console.log("usuario",usuario)
 }
 

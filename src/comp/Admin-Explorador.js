@@ -25,7 +25,7 @@ function PanelAdmin(params) {
                   {
                       params.array &&
                       params.array.map((item, i)=>(
-                          <p className="puntero-mano nombre-proyecto" key={"nombre"+i} >{item.nombre  } </p>
+                          <p onClick={params.handleCargarProyecto} className="puntero-mano nombre-proyecto" id={item.id}  key={"nombre"+i} >{item.nombre } </p>
                       ))
                   }  
                 </div>

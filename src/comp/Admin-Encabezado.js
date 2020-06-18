@@ -1,6 +1,5 @@
 import React from 'react';
-import config from '../config.json';
-const img = config.assets + "img/";
+
 
 
 function Encabezado(params) {
