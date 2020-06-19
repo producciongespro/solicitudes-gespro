@@ -18,12 +18,9 @@ function Status(params) {
 
                 <div className="input-group mb-3">                    
                     <select className="custom-select" id="selPrioridades">
-                    {
-                        prioridades.map((item, i) => {(
-                            <option key={"prioridad" + i} value={item}> {item} </option>
-                        )}
-                        )
-                    }
+                            <option value={prioridades[0]} > {prioridades[0]} </option>
+                            <option value={prioridades[1]} > {prioridades[1]} </option>
+                            <option value={prioridades[2]} > {prioridades[2]} </option>
                     </select>
                 </div>
 
