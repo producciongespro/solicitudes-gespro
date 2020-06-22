@@ -12,7 +12,7 @@ function FormDiseno (props) {
             <Navegacion  handleNavegacion= {props.handleNavegacion } />
 
 <header className="encabezados-diseno">
-    <img id="imagen_encab_index text-center"  src={img+"banners-diseno.png"}   alt="Baner di8seño" />
+    <img id="imagen_encab_index text-center" className="img-fluid" src={img+"banners-diseno.png"}   alt="Baner di8seño" />
   </header>
   {/* Contact*/}
   <section id="contact" data-animate="bounceIn" className="contact-section contact">

@@ -11,7 +11,7 @@ function FormProduccion (props) {
             <Navegacion  handleNavegacion= {props.handleNavegacion } />
 
             <header className="encabezados-produccion">
-    <img id="imagen_encab_index text-center" src={img+"banner-produccion.png"}  alt="Baner producción" />
+    <img id="imagen_encab_index text-center" className="img-fluid" src={img+"banner-produccion.png"}  alt="Baner producción" />
   </header>
   {/* Contact*/}
   <section id="contact" data-animate="bounceIn" className="contact-section contact">

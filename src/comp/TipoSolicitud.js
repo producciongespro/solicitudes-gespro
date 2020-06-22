@@ -15,7 +15,7 @@ function TipoSolicitud(props) {
           <Navegacion />
 
             <header className="encabezados-gespro">
-                <img id="imagen_encab_index text-center" src={img + "banner-gespro.png"} alt="Banner gespro" />
+                <img id="imagen_encab_index text-center" className="img-fluid" src={img + "banner-gespro.png"} alt="Banner gespro" />
             </header>
             {/* Contact*/}
             <section id="contact" data-animate="bounceIn" className="contact-section contact">

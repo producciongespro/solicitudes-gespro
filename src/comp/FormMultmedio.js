@@ -11,7 +11,7 @@ function FormMultimedio ( props ) {
     <Navegacion handleNavegacion= {props.handleNavegacion } />
 
   <header className="encabezados-multimedios">
-    <img id="imagen_encab_index text-center" src={img+"banner-multimedios.png"} alt="Baner Multimedios" />
+    <img id="imagen_encab_index text-center" className="img-fluid" src={img+"banner-multimedios.png"} alt="Baner Multimedios" />
   </header>
   {/* Contact*/}
   <section id="contact" data-animate="bounceIn" className="contact-section contact">
