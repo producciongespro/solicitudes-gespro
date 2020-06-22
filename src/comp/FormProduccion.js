@@ -3,15 +3,15 @@ import Navegacion from './Navegacion';
 import config from '../config.json';
 const img = config.assets + "img/";
 
-function FormProduccion (params) {
+function FormProduccion (props) {
 
     return (
 
         <React.Fragment>
-            <Navegacion />
+            <Navegacion  handleNavegacion= {props.handleNavegacion } />
 
             <header className="encabezados-produccion">
-    <img id="imagen_encab_index text-center" src="img/banner-produccion.png" alt="" />
+    <img id="imagen_encab_index text-center" src={img+"banner-produccion.png"}  alt="Baner producción" />
   </header>
   {/* Contact*/}
   <section id="contact" data-animate="bounceIn" className="contact-section contact">

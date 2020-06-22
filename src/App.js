@@ -24,8 +24,8 @@ const init=()=>{
 }
 
 const handleLogin=()=> {
-  setCompActual( <PanelAdmin />);
-  //setCompActual( <TipoSolicitud handleNavegacion={handleNavegacion} /> )
+  //setCompActual( <PanelAdmin />);
+  setCompActual( <TipoSolicitud handleNavegacion={handleNavegacion} /> )
 }
 
 
@@ -34,14 +34,19 @@ const handleNavegacion=(e)=> {
 
 
   switch (e.target.id) {
+    case "inicio":      
+    case "logo": 
+    //clic en el logo del MEP para ir a inicio
+      setCompActual( <TipoSolicitud handleNavegacion={handleNavegacion} /> )
+    break;
     case "multimedio":      
-      setCompActual(<FormMultimedio />)
+      setCompActual(<FormMultimedio  handleNavegacion={handleNavegacion} />)
     break;
     case "diseno":      
-      setCompActual(<FormDiseno />)
+      setCompActual(<FormDiseno  handleNavegacion={handleNavegacion} />)
     break;
     case "produccion":      
-      setCompActual(<FormProduccion />)
+      setCompActual(<FormProduccion  handleNavegacion={handleNavegacion} />)
     break;
   
     default:

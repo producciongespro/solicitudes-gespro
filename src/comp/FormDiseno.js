@@ -3,16 +3,16 @@ import Navegacion from './Navegacion';
 import config from '../config.json';
 const img = config.assets + "img/";
 
-function FormDiseno (params) {
+function FormDiseno (props) {
     
     return(
 
         <React.Fragment>
 
-            <Navegacion />
+            <Navegacion  handleNavegacion= {props.handleNavegacion } />
 
 <header className="encabezados-diseno">
-    <img id="imagen_encab_index text-center" src="img/banners-diseno.png" alt="" />
+    <img id="imagen_encab_index text-center"  src={img+"banners-diseno.png"}   alt="Baner di8seño" />
   </header>
   {/* Contact*/}
   <section id="contact" data-animate="bounceIn" className="contact-section contact">

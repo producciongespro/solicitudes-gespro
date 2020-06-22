@@ -3,15 +3,15 @@ import Navegacion from './Navegacion';
 import config from '../config.json';
 const img = config.assets + "img/";
 
-function FormMultimedio () {
+function FormMultimedio ( props ) {
     
 
     return (
         <React.Fragment>
-    <Navegacion />
+    <Navegacion handleNavegacion= {props.handleNavegacion } />
 
   <header className="encabezados-multimedios">
-    <img id="imagen_encab_index text-center" src={img+"banner-multimedios.png"} alt="Multimedios" />
+    <img id="imagen_encab_index text-center" src={img+"banner-multimedios.png"} alt="Baner Multimedios" />
   </header>
   {/* Contact*/}
   <section id="contact" data-animate="bounceIn" className="contact-section contact">
