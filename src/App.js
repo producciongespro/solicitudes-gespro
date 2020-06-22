@@ -5,6 +5,7 @@ import FormMultimedio from './comp/FormMultmedio';
 import FormDiseno from './comp/FormDiseno';
 import FormProduccion from './comp/FormProduccion';
 import PanelAdmin from './comp/Admin-Panel';
+import Login from './comp/Login';
 
 
 function App() {
@@ -17,10 +18,14 @@ useEffect(()=>{
     init();
 }, [])
 
-const init=()=>{
-  //setCompActual( <TipoSolicitud handleNavegacion={handleNavegacion} /> )
-  setCompActual( <PanelAdmin  /> );
+const init=()=>{  
+  setCompActual( <Login handleLogin={handleLogin} /> );
   console.log("usuario",usuario)
+}
+
+const handleLogin=()=> {
+  setCompActual( <PanelAdmin />);
+  //setCompActual( <TipoSolicitud handleNavegacion={handleNavegacion} /> )
 }
 
 
@@ -47,13 +52,15 @@ const handleNavegacion=(e)=> {
 }
 
   return (
-    <React.Fragment>             
+    <Contexto.Provider value={contextUsuario}  > 
+    
 
        { 
         compActual
        }
        
-    </React.Fragment>
+    
+    </Contexto.Provider> 
   );
 }
 

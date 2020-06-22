@@ -16,8 +16,10 @@ function Encabezado(params) {
             <div className="col-sm-3 text-center">
                 <h5>CONCLUIDOS</h5>
             </div>
-            <div className="col-sm-3 text-right">
-                Crear informe
+            <div className="col-sm-3 text-right">            
+            <i className="fas fa-plus" /> Crear informe 
+            <i className="far fa-bell mx-2" /> 
+            <i className="fas fa-user mx-2" />
         </div>
         </div>
     );
