@@ -1,7 +1,7 @@
 <?php
 	require_once('conexion.php');
-	$mysql= new Conexion();
-	$conexion= mysql.obtenerConexion();
+	$sql= new conexion();
+	$conexion= sql.obtenerConexion();
 	$datos= array("nombre"=>"Volantes");
 	
 	$sentencia= $conexion->prepare("CALL insert_producto_diseno(?)");

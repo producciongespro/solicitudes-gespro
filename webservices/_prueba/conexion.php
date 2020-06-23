@@ -1,9 +1,9 @@
 <?php
 
-class Conexion {
+class conexion {
 	private $conn;
 	
-	public function __construc()
+	public function _construc()
 	{
 		$this->conn = new mysqli ("localhost", "root", "", "recursos_solicitudes");
 	}
@@ -12,4 +12,5 @@ class Conexion {
 	{
 		return $this->$conn;
 	}
+}
 ?>
