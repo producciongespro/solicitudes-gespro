@@ -6,6 +6,7 @@ import FormDiseno from './comp/FormDiseno';
 import FormProduccion from './comp/FormProduccion';
 import PanelAdmin from './comp/Admin-Panel';
 import Login from './comp/Login';
+import obtener from './modulos/obtener';
 
 
 function App() {
@@ -16,11 +17,19 @@ const contextUsuario = { usuario, setUsuario };
 
 useEffect(()=>{
     init();
+    //TODO prevista para cargar los datos del API
+    //cargarDatos();
 }, [])
 
 const init=()=>{  
   setCompActual( <Login handleLogin={handleLogin} /> );
-  console.log("usuario",usuario)
+  console.log("usuario",usuario);
+}
+
+async function cargarDatos () {
+  let data= await obtener("http://localhost/API-solicitudes-gespro/index.php/Diseno/getDiseno");
+  console.log(data);
+  
 }
 
 const handleLogin=()=> {
