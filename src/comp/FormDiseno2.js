@@ -5,12 +5,17 @@ import Radios from './Radios';
 
 const img = config.assets + "img/";
 
-const diagramacion= ["Banner", "Afiche", "Carpeta", "Certificado", "Atril" ];
+const aarayDiagramacion= ["Banner", "Afiche", "Carpeta", "Certificado", "Atril" ];
 
 
 function FormDiseno2(props) {
 
-  const [abierto1, setAbierto1] = useState(false);
+  const [diagramacion, setDiagramacion] = useState(false);
+
+  const handleAcordeon=(e)=> {
+    setDiagramacion(!diagramacion);
+  }
+
 
 
 
@@ -28,13 +33,17 @@ function FormDiseno2(props) {
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
-            <div className="alert alert-dark" role="alert">
+            <div 
+              className="alert alert-dark" 
+              role="alert"
+              onClick={handleAcordeon}
+              >
               <h6>Diagramación</h6>
             </div>
             </div>
           </div>
           <div className="row">
-            <Radios />
+            { diagramacion &&  <Radios array={aarayDiagramacion} />         }
           </div>
         </div>
       </section>
