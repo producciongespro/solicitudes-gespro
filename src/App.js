@@ -2,7 +2,7 @@ import React, {useState, useEffect } from 'react';
 import Contexto from './Contexto';
 import TipoSolicitud from './comp/TipoSolicitud';
 import FormMultimedio from './comp/FormMultmedio';
-import FormDiseno from './comp/FormDiseno';
+import FormDiseno from './comp/FormDiseno2';
 import FormProduccion from './comp/FormProduccion';
 import PanelAdmin from './comp/Admin-Panel';
 import Login from './comp/Login';
