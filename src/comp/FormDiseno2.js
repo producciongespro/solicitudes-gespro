@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import Navegacion from './Navegacion';
 import config from '../config.json';
+import Radios from './Radios';
 
 const img = config.assets + "img/";
+
+const diagramacion= ["Banner", "Afiche", "Carpeta", "Certificado", "Atril" ];
 
 
 function FormDiseno2(props) {
@@ -26,14 +29,12 @@ function FormDiseno2(props) {
           <div className="row">
             <div className="col-sm-12">
             <div className="alert alert-dark" role="alert">
-              A simple dark alert—check it out!
+              <h6>Diagramación</h6>
             </div>
             </div>
           </div>
           <div className="row">
-            <div className="col-sm-12">
-              
-            </div>
+            <Radios />
           </div>
         </div>
       </section>
