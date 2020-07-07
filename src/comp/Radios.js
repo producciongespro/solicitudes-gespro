@@ -4,18 +4,18 @@ function Radios(props) {
 
 
     return (
-        <div className="col-sm-12">
+        <div className="row animate__animated animate__fadeInLeft">
             {
                 props.array.map((item, i)=>(
-                    <div className="form-check" key={i}>
-                        <input className="form-check-input" type="radio" name="exampleRadios" id={"radio"+i} defaultValue={i} />
+                    <div className="form-check col-sm-6" key={i}>
+                        <input className="form-check-input" type="radio" name="productos" id={"radio"+i} defaultValue={i} />
                         <label className="form-check-label" htmlFor={"radio"+i}>
                             {item}
                         </label>
                     </div>
                 ))
             }
-        </div>
+        </div>        
     )
 }
 
