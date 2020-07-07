@@ -1,18 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navegacion from './Navegacion';
 import config from '../config.json';
 import Radios from './Radios';
+import obtener from '../modulos/obtener';
+import filtrar from '../modulos/filtrar';
 
 const img = config.assets + "img/";
 
-const aarayDiagramacion = ["Banner", "Afiche", "Carpeta", "Certificado", "Atril", "Tarjetas", "Volantes", "Folletos"];
-const arrayMultimedia = ["Presentación", "Tutorial", "Animación simple", "Animación comleja", "Banner anmado"]
+var aarayDiagramacion;
+var arrayMultimedia;
 
 
 function FormDiseno2(props) {
 
+  useEffect(()=>{
+    cargarDatos();
+  },[])
+
+  const [isReady, setReady ]= useState (false);
   const [diagramacion, setDiagramacion] = useState(false);
   const [multimedia, setMultimedia] = useState(false);
+
+
+  async function cargarDatos () {
+    let data= await obtener("http://localhost/solicitudes-gespro/webservices/get_proddiseno.php");
+    console.log(data);
+    filtrarDatosPorCat(data);
+    setReady(true);    
+  }
+
+  const filtrarDatosPorCat=(array)=>{
+    aarayDiagramacion= filtrar(array, "idCatDiseño", 1);
+    //console.log("aarayDiagramacion", aarayDiagramacion);    
+    arrayMultimedia= filtrar(array, "idCatDiseño", 2);
+  }
 
   const handleAcordeon = (e) => {
     console.log(e.target);
@@ -47,7 +68,8 @@ function FormDiseno2(props) {
       </header>
       <hr />
       <section id="contact" data-animate="bounceIn" className="contact-section contact">
-        <div className="container">
+       { isReady && 
+          <div className="container">
 
           <div className="row">
             <div className="col-sm-12">
@@ -62,7 +84,9 @@ function FormDiseno2(props) {
             </div>
           </div>
           <div className="container">
-            {diagramacion && <Radios array={aarayDiagramacion} />}
+            {diagramacion && 
+              <Radios array={aarayDiagramacion} />
+            }
           </div>
           <br />
           <div className="row">
@@ -78,13 +102,14 @@ function FormDiseno2(props) {
             </div>
           </div>
           <div className="container">
-            {multimedia && <Radios array={arrayMultimedia} />}
+            {multimedia && 
+              <Radios array={arrayMultimedia} />
+            }
           </div>
 
 
         </div>
-
-
+       }
       </section>
       <hr />
 

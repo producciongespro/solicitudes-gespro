@@ -8,9 +8,9 @@ function Radios(props) {
             {
                 props.array.map((item, i)=>(
                     <div className="form-check col-sm-6" key={i}>
-                        <input className="form-check-input" type="radio" name="productos" id={"radio"+i} defaultValue={i} />
-                        <label className="form-check-label" htmlFor={"radio"+i}>
-                            {item}
+                        <input className="form-check-input" type="radio" name="productos" id={"radio"+item.idProductoDiseno} defaultValue={item.idProductoDiseno} />
+                        <label className="form-check-label" htmlFor={"radio"+item.idProductoDiseno}>
+                            {item.nombre }
                         </label>
                     </div>
                 ))
