@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
 import Navegacion from './Navegacion';
 import config from '../config.json';
 import Radios from './Radios';
@@ -20,6 +21,10 @@ function FormDiseno2(props) {
   const [isReady, setReady ]= useState (false);
   const [diagramacion, setDiagramacion] = useState(false);
   const [multimedia, setMultimedia] = useState(false);
+
+  const { register, handleSubmit, errors } = useForm();
+  const onSubmit = data => console.log(data);
+  console.log(errors);
 
 
   async function cargarDatos () {
@@ -59,6 +64,7 @@ function FormDiseno2(props) {
 
   return (
 
+
     <React.Fragment>
 
       <Navegacion handleNavegacion={props.handleNavegacion} />
@@ -70,6 +76,9 @@ function FormDiseno2(props) {
       <section id="contact" data-animate="bounceIn" className="contact-section contact">
        { isReady && 
           <div className="container">
+
+            <form onSubmit={handleSubmit(onSubmit)}>
+
 
           <div className="row">
             <div className="col-sm-12">
@@ -85,7 +94,7 @@ function FormDiseno2(props) {
           </div>
           <div className="container">
             {diagramacion && 
-              <Radios array={aarayDiagramacion} />
+              <Radios register={register} array={aarayDiagramacion} />
             }
           </div>
           <br />
@@ -103,10 +112,17 @@ function FormDiseno2(props) {
           </div>
           <div className="container">
             {multimedia && 
-              <Radios array={arrayMultimedia} />
+              <Radios register={register}  array={arrayMultimedia} />
             }
           </div>
-
+          
+          <div className="row">
+            <div className="col-sm-12">
+                <input type="submit"  className="btn btn-warning" value="Enviar"/>
+            </div>
+          </div>
+    
+        </form>
 
         </div>
        }
