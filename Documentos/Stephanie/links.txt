@@ -1,7 +1,11 @@
 Maqueta:  
-Le comparto el link del archivo que realicé en la aplicación web Figma. Me parece que se tienen que registrar para poder usarla. Este es el link: https://www.figma.com/file/tjoJmP4B6zfIRqfxseqGua/Maqueta-PRUEBA-FINAL?node-id=125%3A1954 . 
+Le comparto el link del archivo que realicé en la aplicación web Figma. 
+Me parece que se tienen que registrar para poder usarla. 
+Este es el link: 
+https://www.figma.com/file/tjoJmP4B6zfIRqfxseqGua/Maqueta-PRUEBA-FINAL?node-id=125%3A1954 . 
 
-Aquí puede dar click sobre cualquier elemento y poder ver el código CSS para mantener el estilo, esto es importante sobre todo con lo que son botones, pestañas, elementos de selección e ícono de notificaciones por temas de usabilidad e intuitividad.
+Aquí puede dar click sobre cualquier elemento y poder ver el código CSS 
+para mantener el estilo, esto es importante sobre todo con lo que son botones, pestañas, elementos de selección e ícono de notificaciones por temas de usabilidad e intuitividad.
 
 En la barra de herramientas de la derecha hay una sección que dice "Prototyping" ahí se puede reproducir la maqueta del sitio web que estoy diseñando.
 
