@@ -26,8 +26,8 @@ const setup=()=>{
 
 
 const handleLogin=()=> {
-  //setCompActual( <PanelAdmin />);
-  setCompActual( <TipoSolicitud handleNavegacion={handleNavegacion} /> )
+  setCompActual( <PanelAdmin />);
+  //setCompActual( <TipoSolicitud handleNavegacion={handleNavegacion} /> )
 }
 
 
